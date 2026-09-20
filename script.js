@@ -848,3 +848,19 @@ function init() {
 }
 
 init();
+
+const dateInput = document.getElementById("date");
+const datePlaceholder = document.querySelector(".date-placeholder");
+const dateWrapper = document.querySelector(".date-input-wrapper");
+
+function updateDatePlaceholder() {
+  const hasValue = !!dateInput.value;
+
+  dateWrapper.classList.toggle("has-value", hasValue);
+  datePlaceholder.style.display = hasValue ? "none" : "block";
+}
+
+dateInput.addEventListener("change", updateDatePlaceholder);
+dateInput.addEventListener("input", updateDatePlaceholder);
+
+updateDatePlaceholder();

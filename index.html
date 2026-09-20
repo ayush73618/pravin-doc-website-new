@@ -2027,13 +2027,18 @@
                   ><span class="lang hi" lang="hi">पसंदीदा तारीख</span>
                   <span class="opt">*</span></label
                 >
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  required
-                  aria-describedby="err-date"
-                />
+                <div class="date-input-wrapper">
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    aria-describedby="err-date"
+                  />
+                  <span class="date-placeholder" aria-hidden="true"
+                    >dd-mm-yyyy</span
+                  >
+                </div>
                 <div class="field-error" id="err-date"></div>
               </div>
               <div class="field">
